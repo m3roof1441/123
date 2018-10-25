@@ -35,43 +35,7 @@ client.on('ready', () => {
 // تم برمجة الكود من قبل فارس
 
 
-client.on("message", message => {
-            if (message.content.startsWith(prefix + "bc")) {
-                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-  let args = message.content.split(" ").slice(1);
-  var argresult = args.join(' ');
-  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
- m.send(`${argresult}\n ${m}`);
-})// تم برمجة الكود من قبل فارس
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` : عدد الاعضاء المستلمين`);
- message.delete();
-};     // تم برمجة الكود من قبل فارس
-});
-const child_process = require("child_process");
-const id = ['280749272498962432'];//ايديك
 
-client.on('message', message => {
-    if (message.content === "$rs") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/m.js");
-        console.log(`تم اعادة تشغيل البوت`);
-    }
-
-  });
-
-// تم برمجة الكود من قبل فارس
-client.on('ready', () => {});
-var download = function(uri, filename, callback) {
-    request.head(uri, function(err, res, body) {
-        console.log('content-type:', res.headers['content-type']);
-        console.log('content-length:', res.headers['content-length']);
-
-        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-    });
-};
 // تم برمجة الكود من قبل فارس
 
 client.on('message', function(message) {
@@ -316,22 +280,22 @@ ${prefix}str - change streming bot
 
 
 client.on('message', message => {
-    var prefix = "$";// تم برمجة الكود من قبل فارس
+    var prefix = "N";// تم برمجة الكود من قبل فارس
 
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
       var argresult = args.join(' ');
-      if (message.author.id == 411564557027508235) return;
+      if (message.author.id == 393435687594229761) return;
 
     if (message.content.startsWith(prefix + 'setname')) {
-    if (message.author.id !== '280749272498962432') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '393435687594229761') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
       client.user.setUsername(argresult).then
           message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
       return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
     } else
 
     if (message.content.startsWith(prefix + 'setavatar')) {
-    if (message.author.id !== '280749272498962432') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **') //ايديك هنا
+    if (message.author.id !== '393435687594229761') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **') //ايديك هنا
     client.user.setAvatar(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
     }
@@ -340,8 +304,8 @@ client.on('message', message => {
 // تم برمجة الكود من قبل فارس
      });
 
-	const devs = ['280749272498962432']; //ايديك هنا
-const adminprefix = "$";// البريفيكس الي تبيه لأوامر ساحب البوت
+	const devs = ['393435687594229761']; //ايديك هنا
+const adminprefix = "N";// البريفيكس الي تبيه لأوامر ساحب البوت
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
