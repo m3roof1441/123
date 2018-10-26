@@ -43,7 +43,7 @@ client.on('message', function(message) {
     const mess = message.content.toLowerCase();
     const args = message.content
 
-    if (msg.content(prefix + 'play')) {
+    if (message.content(prefix + 'play')) {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign:  **يجب ان تكون في روم صوتي**');
@@ -99,7 +99,7 @@ client.on('message', function(message) {
             });
         }// تم برمجة الكود من قبل فارس
     }
-    else if (msg.content(prefix + 'skip')) {
+    else if (message.content(prefix + 'skip')) {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign:  **يجب ان تكون في روم صوتي**');
@@ -118,7 +118,7 @@ client.on('message', function(message) {
         dispatcher.setVolume(1 * args / 50);
         message.channel.sendMessage(`**__ ${dispatcher.volume*50}% مستوى الصوت __**`);
     }
-    else if (msg.content(prefix + 'pause')) {
+    else if (message.content(prefix + 'pause')) {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign:  **يجب ان تكون في روم صوتي**');
@@ -126,7 +126,7 @@ client.on('message', function(message) {
             dispatcher.pause();
         });
     }
-    else if (msg.content(prefix + 'ok')) {
+    else if (message.content(prefix + 'ok')) {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign:  **يجب ان تكون في روم صوتي**');
@@ -134,7 +134,7 @@ client.on('message', function(message) {
             dispatcher.resume();
         });
     }
-    else if (msg.content(prefix + 'leave')) {
+    else if (message.content(prefix + 'leave')) {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign:  **يجب ان تكون في روم صوتي**');
@@ -234,7 +234,7 @@ function isYoutube(str) {
 }
 
 client.on('message', message => {
-     if (message.content === "$help") {
+     if (message.content === "Nhelp") {
                          if(!message.channel.guild) return message.reply('** This command only for servers**');
 
          message.channel.sendMessage('**Done :ok_hand:**')
@@ -267,9 +267,9 @@ ${prefix}vol [0-100] - sets or shows volume
 ${prefix}setname - change name bot
 ${prefix}setavatar - change avatar bot
 ${prefix}ply - change playing bot
-${prefix}wat - change watching bot
-${prefix}lis - change LISTENING bot
-${prefix}str - change streming bot
+${prefix}wt - change watching bot
+${prefix}ls - change LISTENING bot
+${prefix}st - change streming bot
  **`)
 
 
